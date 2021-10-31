@@ -2,7 +2,7 @@ import IOKit
 import Foundation
 
 public struct IOKitHelper {
-    public static func getIOReturnDescription(_ value:IOReturn) -> String {
+    public static func getIOReturnDescription(_ value: IOReturn) -> String {
         switch (value) {
             case kIOReturnAborted: return "Operation aborted"
             case kIOReturnBadArgument: return "Invalid argument"

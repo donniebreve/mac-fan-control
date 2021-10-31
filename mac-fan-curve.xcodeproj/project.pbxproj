@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F616D7C42571C29B005C97D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7C32571C29B005C97D1 /* AppDelegate.swift */; };
-		F616D7C62571C29B005C97D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7C52571C29B005C97D1 /* ContentView.swift */; };
+		F616D7C62571C29B005C97D1 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7C52571C29B005C97D1 /* AboutView.swift */; };
 		F616D7C82571C29D005C97D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F616D7C72571C29D005C97D1 /* Assets.xcassets */; };
 		F616D7CB2571C29D005C97D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F616D7CA2571C29D005C97D1 /* Preview Assets.xcassets */; };
 		F616D7CE2571C29D005C97D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F616D7CC2571C29D005C97D1 /* Main.storyboard */; };
@@ -16,23 +16,27 @@
 		F616D7E22571CED4005C97D1 /* FanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7E12571CED4005C97D1 /* FanController.swift */; };
 		F616D7E62571FC5B005C97D1 /* SMCKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7E52571FC5B005C97D1 /* SMCKit.swift */; };
 		F616D7EB25721687005C97D1 /* IOKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F616D7EA25721687005C97D1 /* IOKitHelper.swift */; };
+		F6703CCC272DEFBD00D571DE /* ConfigurationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6703CCB272DEFBD00D571DE /* ConfigurationController.swift */; };
 		F6A348B025A2539500C2DF15 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A348AF25A2539500C2DF15 /* TemperatureController.swift */; };
+		F6F198C8272B11F5003A144C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F198C7272B11F5003A144C /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F616D7C02571C29B005C97D1 /* mac-fan-curve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mac-fan-curve.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F616D7C32571C29B005C97D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F616D7C52571C29B005C97D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F616D7C52571C29B005C97D1 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		F616D7C72571C29D005C97D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F616D7CA2571C29D005C97D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F616D7CD2571C29D005C97D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F616D7CF2571C29D005C97D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F616D7D02571C29D005C97D1 /* mac_fan_curve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_fan_curve.entitlements; sourceTree = "<group>"; };
+		F616D7D02571C29D005C97D1 /* mac-fan-curve.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "mac-fan-curve.entitlements"; sourceTree = "<group>"; };
 		F616D7DC2571C9F8005C97D1 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 		F616D7E12571CED4005C97D1 /* FanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FanController.swift; sourceTree = "<group>"; };
 		F616D7E52571FC5B005C97D1 /* SMCKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMCKit.swift; sourceTree = "<group>"; };
 		F616D7EA25721687005C97D1 /* IOKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOKitHelper.swift; sourceTree = "<group>"; };
+		F6703CCB272DEFBD00D571DE /* ConfigurationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationController.swift; sourceTree = "<group>"; };
 		F6A348AF25A2539500C2DF15 /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
+		F6F198C7272B11F5003A144C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F198C8272B11F5003A144C /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,19 +54,14 @@
 		F616D7B72571C29B005C97D1 = {
 			isa = PBXGroup;
 			children = (
-				F616D7E925721651005C97D1 /* iokit */,
-				F616D7E42571FC4B005C97D1 /* smc */,
-				F616D7C32571C29B005C97D1 /* AppDelegate.swift */,
-				F616D7C52571C29B005C97D1 /* ContentView.swift */,
-				F616D7DC2571C9F8005C97D1 /* StatusBarController.swift */,
-				F6A348AF25A2539500C2DF15 /* TemperatureController.swift */,
-				F616D7E12571CED4005C97D1 /* FanController.swift */,
-				F616D7CC2571C29D005C97D1 /* Main.storyboard */,
 				F616D7CF2571C29D005C97D1 /* Info.plist */,
-				F616D7D02571C29D005C97D1 /* mac_fan_curve.entitlements */,
+				F616D7D02571C29D005C97D1 /* mac-fan-curve.entitlements */,
 				F616D7C72571C29D005C97D1 /* Assets.xcassets */,
+				F6703CC6272DEB0A00D571DE /* interface */,
+				F6703CC5272DEAD200D571DE /* src */,
 				F616D7C92571C29D005C97D1 /* Preview Content */,
 				F616D7C12571C29B005C97D1 /* Products */,
+				F6F198C6272B11F5003A144C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +97,37 @@
 			path = iokit;
 			sourceTree = "<group>";
 		};
+		F6703CC5272DEAD200D571DE /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F616D7E925721651005C97D1 /* iokit */,
+				F616D7E42571FC4B005C97D1 /* smc */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F6703CC6272DEB0A00D571DE /* interface */ = {
+			isa = PBXGroup;
+			children = (
+				F616D7C32571C29B005C97D1 /* AppDelegate.swift */,
+				F616D7C52571C29B005C97D1 /* AboutView.swift */,
+				F6703CCB272DEFBD00D571DE /* ConfigurationController.swift */,
+				F616D7E12571CED4005C97D1 /* FanController.swift */,
+				F616D7DC2571C9F8005C97D1 /* StatusBarController.swift */,
+				F6A348AF25A2539500C2DF15 /* TemperatureController.swift */,
+				F616D7CC2571C29D005C97D1 /* Main.storyboard */,
+			);
+			path = interface;
+			sourceTree = "<group>";
+		};
+		F6F198C6272B11F5003A144C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F198C7272B11F5003A144C /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,6 +159,7 @@
 				TargetAttributes = {
 					F616D7BF2571C29B005C97D1 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1310;
 					};
 				};
 			};
@@ -167,12 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F616D7C62571C29B005C97D1 /* ContentView.swift in Sources */,
+				F616D7C62571C29B005C97D1 /* AboutView.swift in Sources */,
 				F6A348B025A2539500C2DF15 /* TemperatureController.swift in Sources */,
 				F616D7C42571C29B005C97D1 /* AppDelegate.swift in Sources */,
 				F616D7DD2571C9F8005C97D1 /* StatusBarController.swift in Sources */,
 				F616D7E62571FC5B005C97D1 /* SMCKit.swift in Sources */,
 				F616D7EB25721687005C97D1 /* IOKitHelper.swift in Sources */,
+				F6703CCC272DEFBD00D571DE /* ConfigurationController.swift in Sources */,
 				F616D7E22571CED4005C97D1 /* FanController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -297,6 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -311,19 +346,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = mac_fan_curve.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "donniebreve.mac-fan-curve";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.donniebreve.mac-fan-curve";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -333,19 +372,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = mac_fan_curve.entitlements;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Preview Content\"";
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = NO;
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "donniebreve.mac-fan-curve";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.donniebreve.mac-fan-curve";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
