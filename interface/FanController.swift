@@ -41,9 +41,20 @@ class FanController {
         }
     }
     
+    func setFansAuto(_ auto: Bool) {
+        do {
+            for fan in fans {
+                try SMCKit.fanSetAuto(fan.id, auto)
+            }
+        }
+        catch {
+            print("Failed to set fan mode")
+        }
+    }
+    
     func setFanAuto(_ id: Int, _ auto: Bool) {
         do {
-            return try SMCKit.fanSetAuto(id, auto)
+            try SMCKit.fanSetAuto(id, auto)
         }
         catch {
             print("Failed to set fan mode")
@@ -62,7 +73,7 @@ class FanController {
     
     func setFanSpeed(_ id: Int, _ speed: Int) {
         do {
-            return try SMCKit.fanSetTargetSpeed(id, speed)
+            try SMCKit.fanSetTargetSpeed(id, speed)
         }
         catch {
             print("Failed to set fan speed")
