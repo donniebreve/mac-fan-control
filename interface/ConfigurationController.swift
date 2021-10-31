@@ -12,8 +12,10 @@ class ConfigurationController {
     init() {
         fontFamily = "Monaco"
         fontSize = 9
-        let home = FileManager.default.homeDirectoryForCurrentUser
-        let configFile = home
+        guard let envHome = ProcessInfo.processInfo.environment["HOME"] else {
+            preconditionFailure("HOME environment variable not set.")
+        }
+        let configFile = URL(fileURLWithPath: envHome, isDirectory: true)
             .appendingPathComponent(".config")
             .appendingPathComponent("mac-fan-curve")
             .appendingPathComponent("mac-fan-curve")
