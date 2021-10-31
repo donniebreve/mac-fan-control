@@ -11,9 +11,9 @@ class ConfigurationController {
 
     init() {
         fontFamily = "Monaco"
-        fontSize = 10
-        let home = FileManager.default.homeDirectory(forUser: "don")
-        let configFile = home!
+        fontSize = 9
+        let home = FileManager.default.homeDirectoryForCurrentUser
+        let configFile = home
             .appendingPathComponent(".config")
             .appendingPathComponent("mac-fan-curve")
             .appendingPathComponent("mac-fan-curve")
@@ -50,10 +50,10 @@ class ConfigurationController {
                         fontSize = Float(tokens[1])!
                     }
                     if (tokens[0] == "ShowTemperature") {
-                        showTemperature = true
+                        showTemperature = parseBool(tokens[1])
                     }
                     if (tokens[0] == "ShowFanSpeed") {
-                        showFanSpeed = true
+                        showFanSpeed = parseBool(tokens[1])
                     }
                     break;
 
@@ -82,5 +82,9 @@ class ConfigurationController {
     
     func isCommentOrEmpty(_ line: String) -> Bool {
         return line.isEmpty || line.starts(with: "#");
+    }
+    
+    func parseBool(_ value: Substring) -> Bool {
+        return (value as NSString).boolValue
     }
 }

@@ -70,26 +70,40 @@ class FanController {
     }
     
     func update(_ temperature: Int) {
-        setFanAuto(0, false)
-        let maxSpeed = 7200
-        var targetTemperature = 0
-        var targetPercentage = 0
-        for target in configurationController.temperatureTargets {
-            if (target.0 > temperature) {
-                targetTemperature = target.0
-                targetPercentage = target.1
-                break
+        do {
+            var targetTemperature = 0
+            var targetPercentage = 0
+            for target in configurationController.temperatureTargets {
+                if (target.0 > temperature) {
+                    targetTemperature = target.0
+                    targetPercentage = target.1
+                    break
+                }
+            }
+            for fan in fans {
+                if (targetTemperature == 0 || targetPercentage == 0) {
+                    if (try !SMCKit.fanIsAuto(fan.id)) {
+                        print("reverting to auto mode")
+                        setFanAuto(fan.id, true)
+                    }
+                    return
+                }
+                let minSpeed = fan.minSpeed
+                let maxSpeed = fan.maxSpeed
+                setFanAuto(fan.id, false)
+                let targetSpeed = Double(maxSpeed) * (Double(targetPercentage) / 100)
+                var interpolatedSpeed = Int(targetSpeed * (Double(temperature) / Double(targetTemperature)))
+                if (interpolatedSpeed < minSpeed) {
+                    interpolatedSpeed = 0
+                }
+                if (interpolatedSpeed > maxSpeed) {
+                    interpolatedSpeed = maxSpeed
+                }
+                setFanSpeed(fan.id, Int(interpolatedSpeed))
             }
         }
-        if (targetTemperature == 0 || targetPercentage == 0) {
-            setFanAuto(0, true)
-            return
+        catch {
+            print("Failed fan controller update")
         }
-        let targetSpeed = Double(maxSpeed) * (Double(targetPercentage) / 100)
-        var interpolatedSpeed = Int(targetSpeed * (Double(temperature) / Double(targetTemperature)))
-        if (interpolatedSpeed > maxSpeed) {
-            interpolatedSpeed = maxSpeed
-        }
-        setFanSpeed(0, Int(interpolatedSpeed))
     }
 }
