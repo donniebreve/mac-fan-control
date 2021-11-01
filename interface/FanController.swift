@@ -84,17 +84,26 @@ class FanController {
         do {
             var targetTemperature = 0
             var targetPercentage = 0
-            for target in configurationController.temperatureTargets {
-                if (target.0 > temperature) {
-                    targetTemperature = target.0
-                    targetPercentage = target.1
-                    break
+            if (temperature < configurationController.minTargetTemperature) {
+                targetTemperature = 0
+                targetPercentage = 0
+            }
+            else if (temperature > configurationController.maxTargetTemperature) {
+                targetTemperature = temperature
+                targetPercentage = 100
+            }
+            else {
+                for target in configurationController.temperatureTargets {
+                    if (target.0 >= temperature) {
+                        targetTemperature = target.0
+                        targetPercentage = target.1
+                        break
+                    }
                 }
             }
             for fan in fans {
                 if (targetTemperature == 0 || targetPercentage == 0) {
                     if (try !SMCKit.fanIsAuto(fan.id)) {
-                        print("reverting to auto mode")
                         setFanAuto(fan.id, true)
                     }
                     return

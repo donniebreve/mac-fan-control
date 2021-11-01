@@ -27,7 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         createAboutWindow()
         
         // Start the internal timer
-        timer = Timer(timeInterval: 3.0, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
+        timer = Timer(timeInterval: 1.0, target: self, selector: #selector(timerCallback), userInfo: nil, repeats: true)
         timer.tolerance = 0.5
         RunLoop.current.add(timer, forMode: RunLoop.Mode.common)
     }
