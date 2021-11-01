@@ -8,6 +8,8 @@ class ConfigurationController {
     public var showTemperature: Bool!
     public var showFanSpeed: Bool!
     public var temperatureTargets: Array<(Int, Int)>!
+    public var minTargetTemperature: Int = 0
+    public var maxTargetTemperature: Int = 0
 
     init() {
         fontFamily = "Monaco"
@@ -57,7 +59,7 @@ class ConfigurationController {
                     if (tokens[0] == "ShowFanSpeed") {
                         showFanSpeed = parseBool(tokens[1])
                     }
-                    break;
+                    break
 
                 case 2: // Curve
                     let tokens = line.split(separator: "=")
@@ -69,6 +71,18 @@ class ConfigurationController {
                 
                 default:
                     break
+            }
+        }
+        if (!temperatureTargets.isEmpty) {
+            minTargetTemperature = temperatureTargets[0].0
+            maxTargetTemperature = temperatureTargets[0].0
+            for target in temperatureTargets {
+                if (target.0 < minTargetTemperature) {
+                    minTargetTemperature = target.0
+                }
+                if (target.0 > maxTargetTemperature) {
+                    maxTargetTemperature = target.0
+                }
             }
         }
     }
