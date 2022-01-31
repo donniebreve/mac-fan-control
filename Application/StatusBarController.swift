@@ -11,10 +11,12 @@ class StatusBarController {
         self.configurationController = configurationController
         statusItem = NSStatusBar.system.statusItem(withLength: -1)
         statusItem.menu = menu
-        statusBarButton = statusItem.button!
-        statusBarButton.font = NSFont(
+        
+        let font = NSFont(
             name: configurationController.fontFamily,
             size: CGFloat(configurationController.fontSize))
+        statusBarButton = statusItem.button!
+        statusBarButton.font = font
     }
     
     func setTemperature(_ temperature: Int) {

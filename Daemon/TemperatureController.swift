@@ -6,13 +6,13 @@ class TemperatureController {
     init() {
         do {
             let sensors = try SMCKit.allKnownTemperatureSensors()
-//            for sensor in sensors {
-//                print("[name:\(sensor.name), code: \(sensor.code.toString())]")
-//            }
-//            let usensors = try SMCKit.allUnknownTemperatureSensors()
-//            for sensor in usensors {
-//                print("[name:\(sensor.name), code: \(sensor.code.toString())]")
-//            }
+            for sensor in sensors {
+                print("[name:\(sensor.name), code: \(sensor.code.toString())]")
+            }
+            let usensors = try SMCKit.allUnknownTemperatureSensors()
+            for sensor in usensors {
+                print("[name:\(sensor.name), code: \(sensor.code.toString())]")
+            }
         }
         catch {
             print("Failure")

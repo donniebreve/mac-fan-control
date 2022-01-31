@@ -5,9 +5,9 @@ struct AboutView: View {
         HStack{
             //Image(nsImage:NSImage(named:NSImage.Name("keyboard_128"))!).padding()
             VStack {
-                Text("Mac Fan Curve").font(.title)// + Text("mac")
+                Text("Mac Fan Curve").font(.title)
                 Text("Version 0.1")
-                Text("A lightweight application to control your Macbook fan.")
+                Text("A lightweight application to control your Macbook fan(s).")
                     .font(Font.system(size: 10))
                     .italic()
                     .frame(minWidth: 0, idealWidth: 0, maxWidth: 200, minHeight: 0, idealHeight: 0, maxHeight: 50, alignment: .center)

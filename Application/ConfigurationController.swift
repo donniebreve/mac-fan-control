@@ -7,13 +7,14 @@ class ConfigurationController {
     public var fontSize: Float
     public var showTemperature: Bool!
     public var showFanSpeed: Bool!
+    public var fanControlEnabled: Bool!
     public var temperatureTargets: Array<(Int, Int)>!
     public var minTargetTemperature: Int = 0
     public var maxTargetTemperature: Int = 0
 
     init() {
-        fontFamily = "Monaco"
-        fontSize = 9
+        fontFamily = "Arial"
+        fontSize = 10
         guard let envHome = ProcessInfo.processInfo.environment["HOME"] else {
             preconditionFailure("HOME environment variable not set.")
         }
@@ -73,7 +74,11 @@ class ConfigurationController {
                     break
             }
         }
+        if (temperatureTargets.isEmpty) {
+            fanControlEnabled = false
+        }
         if (!temperatureTargets.isEmpty) {
+            fanControlEnabled = true
             minTargetTemperature = temperatureTargets[0].0
             maxTargetTemperature = temperatureTargets[0].0
             for target in temperatureTargets {

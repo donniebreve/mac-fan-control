@@ -110,6 +110,7 @@ class FanController {
                 }
                 let minSpeed = fan.minSpeed
                 let maxSpeed = fan.maxSpeed
+                let currentSpeed = getFanSpeed(fan.id)
                 setFanAuto(fan.id, false)
                 let targetSpeed = Double(maxSpeed) * (Double(targetPercentage) / 100)
                 var interpolatedSpeed = Int(targetSpeed * (Double(temperature) / Double(targetTemperature)))
